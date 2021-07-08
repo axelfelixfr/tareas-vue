@@ -1,10 +1,22 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="app">
+    <Navegacion></Navegacion>
+    <BaseForm></BaseForm>
+    <router-view />
   </div>
-  <router-view/>
 </template>
+
+<script>
+import Navegacion from "@/components/Navegacion.vue";
+import BaseForm from "@/components/BaseForm.vue";
+
+export default {
+  components: {
+    Navegacion,
+    BaseForm,
+  },
+};
+</script>
 
 <style>
 #app {
